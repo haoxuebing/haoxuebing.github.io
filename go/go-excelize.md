@@ -3,13 +3,14 @@ title: go操作excel
 date: 2021-08-18 18:45:14
 categories: go
 tags: [go, excelize]
-description: 本篇文章介绍如何使用go语言操作excel
+description: 本篇文章介绍如何使用go语言操作excel 
 ---
 # go操作excel
-> go 语言下操作excel的包很多，这里主要介绍 excelize 的使用，使用本类库要求使用的 Go 语言为 <font color=red> 1.15 </font>或更高版本 
+> go 语言下操作excel的包很多，这里主要介绍 [excelize](https://xuri.me/excelize/zh-hans/) 的使用，使用本类库要求使用的 Go 语言为 <font color=red> 1.15 </font>或更高版本，
 
 ## 安装 
 - 使用 go Modules 管理软件包
+
 > go get -u github.com/xuri/excelize/v2
 
 
