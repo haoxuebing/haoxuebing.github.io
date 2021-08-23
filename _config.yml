@@ -1,1 +1,15 @@
 theme: jekyll-theme-cayman
+
+title: 郝雪冰的博客
+subtitle: 
+description: 
+author: haoxuebing
+url: http://haoxuebing.github.io
+
+# markdown: kramdown
+
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: true
+  tab_replace:
