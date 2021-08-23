@@ -6,7 +6,7 @@ description:
 author: haoxuebing
 url: http://haoxuebing.github.io
 
-# markdown: kramdown
+markdown: kramdown
 
 highlight:
   enable: true
