@@ -128,7 +128,7 @@ func main() {
     fmt.Println("over");
 }
 ```
-代码执行结果：
+执行结果：
 ```
 http://www.baiyuxiong.com/
 http://www.google.com/
