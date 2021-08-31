@@ -71,3 +71,17 @@ func main() {
 	fmt.Println("map2:", reflect.TypeOf(map2)) // map2:map[string]string
 }
 ```
+
+## map和interface互转
+```golang
+func main() {
+	var myInterface interface{}
+	map1 := map[string]string{
+		"key1": "Abc",
+	}
+	myInterface = map1
+	fmt.Println("myInterface:", reflect.TypeOf(myInterface))  //myInterface: map[string]string
+	map2 := myInterface.(map[string]string)
+	fmt.Println(map2["key1"])   // Abc
+}
+```
