@@ -69,6 +69,6 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
-	fmt.Printf("map2:%T", map2) // map2:map[string]string
+	fmt.Println("map2:", reflect.TypeOf(map2)) // map2:map[string]string
 }
 ```
