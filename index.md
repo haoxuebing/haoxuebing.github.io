@@ -7,6 +7,7 @@ date: 2021-08-18 18:45:14
 ## Go 基础
 - [sync包之WaitGroup](go基础/go-sync包之WaitGroup.md)
 - [go操作excel](go基础/go-excelize.md)
+- [go类型转化](go基础/go-类型转化.md)
 
 ## Go 进阶
 - [Context包](go/go-excelize.md)
