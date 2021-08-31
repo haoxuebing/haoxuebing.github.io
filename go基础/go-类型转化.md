@@ -65,7 +65,6 @@ func main() {
 	// json 转map
 	map2 := make(map[string]string)
 	err := json.Unmarshal(mjson, &map2)
-	// err := json.Unmarshal([]byte(mString), &map2)
 	if err != nil {
 		fmt.Println(err)
 	}
