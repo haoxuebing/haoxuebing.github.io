@@ -1,9 +1,9 @@
 ---
-title: sync包之WaitGroup
+title: WaitGroup
 date: 2021-08-30
 categories: go
 tags: [go, sync, WaitGroup]
-description: GO语言并发编程-sync包之WaitGroup的使用
+description: GO语言并发编程，使用sync包下的WaitGroup完成对一组协程的控制
 ---
 
 ## 概述
