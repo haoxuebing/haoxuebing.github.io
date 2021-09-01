@@ -9,6 +9,7 @@ date: 2021-08-18 18:45:14
 - [go操作excel](go基础/go-excelize.md)
 - [go类型转化](go基础/go-类型转化.md)
 - [go发送http请求和http服务器](go基础/go-http.md)
+- [go读写文件](go基础/go-读写文件.md)
 
 ## Go 进阶
 - [Context包](go/go-excelize.md)
