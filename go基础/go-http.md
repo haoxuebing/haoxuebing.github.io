@@ -37,6 +37,7 @@ func HttpPost(url string) {
 ```
 ### PostForm 请求 
 > Content-Type 设置成了  application/x-www-form-urlencoded.
+
 ```golang 
 func HttpPostForm(urlStr string) {
 	form := url.Values{"foo": {"bar"}}
