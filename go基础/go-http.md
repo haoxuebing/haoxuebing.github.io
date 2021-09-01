@@ -1,9 +1,9 @@
 ---
-title: net/http
+title: go发送http请求和http服务器
 date: 2021-08-31
 categories: go
-tags: [go, net/http]
-description: http包提供了HTTP客户端和服务端，客户端主要用来发送http请求，服务端主要是监听端口处理http请求
+tags: [go, http]
+description: go语言的net/http包含http客户端和http服务端，客户端主要用来发送http请求，服务端主要是监听端口处理http请求
 ---
 
 ## HttpClient
