@@ -10,6 +10,7 @@ date: 2021-08-18 18:45:14
 - [go类型转化](go基础/go-类型转化.md)
 - [go发送http请求和http服务器](go基础/go-http.md)
 - [go读写文件](go基础/go-读写文件.md)
+- [go判断结构体是否为空](go基础/go-判断结构体是否为空.md)
 
 ## Go 进阶
 - [Context包](go/go-excelize.md)
