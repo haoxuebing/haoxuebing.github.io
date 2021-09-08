@@ -40,7 +40,9 @@ func main() {
 
 ## 疑问
 > reflect.DeepEqual源码中有个packEface方法很是神奇，变量e是emptyInterface指针类型，对e的属性赋值后，变量i居然获取到了外部变量的属性值(eg:p.Id,p.Name的值)，功力不够目前没明白
+
 ```golang
+
 // emptyInterface is the header for an interface{} value.
 type emptyInterface struct {
 	typ  *rtype
