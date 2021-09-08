@@ -1,14 +1,14 @@
 ---
-title: go判断接两个变量是否相等
+title: go判断两个变量是否相等
 date: 2021-09-07
 categories: go
 tags: [go, reflect]
-description: 判断一个变量是否相等是编程过程很常见的操作
+description: 判断变量是否相等是编程过程很常见的操作
 ---
 
 ## 前言
 判断结构体是否为空不能用nil
-reflect.DeepEqual本质上是递归,使用反射类型测试深度相等性，可以比较go语言的任何变量
+reflect.DeepEqual本质上是递归,使用反射类型测试深度相等性，可以比较任意两个go语言变量是否相等
 
 
 ```golang
