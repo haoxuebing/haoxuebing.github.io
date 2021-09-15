@@ -252,7 +252,7 @@ $ curl http://127.0.0.1:8080/debug/pprof/trace?seconds=5 > trace.pprof
 $ go tool trace -http=127.0.0.1:8000 trace.pprof
 ```
 
-## 参考资料：
-https://www.cnblogs.com/qcrao-2018/p/11832732.html
-https://www.jianshu.com/p/4e4ff6be6af9
-https://zhuanlan.zhihu.com/p/141640004
+## 参考资料  
+https://www.cnblogs.com/qcrao-2018/p/11832732.html  
+https://www.jianshu.com/p/4e4ff6be6af9  
+https://zhuanlan.zhihu.com/p/141640004  
