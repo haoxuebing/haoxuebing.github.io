@@ -79,7 +79,7 @@ $ ./main --memprofile=mem.pprof
 ### 启动pprof 可视化界面
 方法一：
 ```
-$go tool pprof -http=:8080 cpu.prof
+$ go tool pprof -http=:8080 cpu.prof
 ```
 方法二：
 ```
@@ -160,6 +160,7 @@ go tool pprof http://localhost:8000/debug/pprof/mutex
 ## trace的使用
 trace工具也是golang支持的go tool工具之一，能够辅助我们跟踪程序的执行情况，进一步方便我们排查问题，往往配合pprof使用。trace的使用和pprof类似，为了简化分析，我们首先利用下列代码进行讲解，只是用1核运行程序：
 
+### 本地程序
 ```golang
 package main
 
@@ -208,11 +209,50 @@ func main(){
 
 通过编译、执行和如下指令得到trace图
 ```
-go tool trace -http=127.0.0.1:8000 trace.pprof
+$ go build main.go
+$ ./main --traceprofile=trace.pprof
+# 通过web查看trace.pprof
+$ go tool trace -http=127.0.0.1:8000 trace.pprof
 ```
 ![trace](/images/trace.png)
+`w` 放大时间线，`s` 缩小时间线
 
-参考资料：
+### web程序
+```golang
+package main
+
+import (
+	"log"
+	"net/http"
+	_ "net/http/pprof"
+)
+
+func main() {
+	http.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
+		s := bigBytes()
+		if s == nil {
+			log.Println("oh noes")
+		}
+		w.Write([]byte("hello world!"))
+	})
+
+	http.ListenAndServe("127.0.0.1:8080", nil)
+}
+
+func bigBytes() *[]byte {
+	s := make([]byte, 10000000)
+	return &s
+}
+```
+web程序不需要引入`trace`包，否则，引入`pprof`包，通过curl 命令下载trace信息
+```
+# 使用curl 下载最近5s的 trace 信息
+$ curl http://127.0.0.1:8080/debug/pprof/trace?seconds=5 > trace.pprof
+# 通过web查看trace.pprof
+$ go tool trace -http=127.0.0.1:8000 trace.pprof
+```
+
+## 参考资料：
 https://www.cnblogs.com/qcrao-2018/p/11832732.html
 https://www.jianshu.com/p/4e4ff6be6af9
 https://zhuanlan.zhihu.com/p/141640004
