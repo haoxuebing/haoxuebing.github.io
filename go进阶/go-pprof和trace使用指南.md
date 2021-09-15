@@ -253,6 +253,6 @@ $ go tool trace -http=127.0.0.1:8000 trace.pprof
 ```
 
 ## 参考资料  
-https://www.cnblogs.com/qcrao-2018/p/11832732.html  
-https://www.jianshu.com/p/4e4ff6be6af9  
-https://zhuanlan.zhihu.com/p/141640004  
+[深度解密Go语言之 pprof](https://www.cnblogs.com/qcrao-2018/p/11832732.html)  
+[Golang 大杀器之性能剖析 PProf](https://www.jianshu.com/p/4e4ff6be6af9)  
+[golang系列—性能评测之pprof+火焰图+trace](https://zhuanlan.zhihu.com/p/141640004)  
