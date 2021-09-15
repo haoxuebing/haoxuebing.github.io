@@ -122,6 +122,7 @@ import (
 )
 
 func main() {
+	// 自定义server对象，设置读超时、写超时等多种参数
 	server := &http.Server{
 		Addr:         "127.0.0.1:8000",
 		ReadTimeout:  2 * time.Second,
