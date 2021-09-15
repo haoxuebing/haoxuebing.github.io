@@ -108,3 +108,44 @@ func main() {
 	http.ListenAndServe(":8080", nil)
 }
 ```
+
+### 自定义server对象的Http服务 
+
+代码调用两个路由的处理函数：Handle和HandleFunc。 Handle的第二个参数是一个handler对象，该对象必须实现ServeHTTP方法，我们在ServeHTTP方法中完成我们的处理逻辑，显然直接使用HandleFunc要方便一些，从源码中可以看到HandleFunc最终也是调用了Handle函数完成操作
+```golang
+package main
+
+import (
+	"log"
+	"net/http"
+	"time"
+)
+
+func main() {
+	server := &http.Server{
+		Addr:         "127.0.0.1:8000",
+		ReadTimeout:  2 * time.Second,
+		WriteTimeout: 2 * time.Second,
+	}
+	mux := http.NewServeMux()           //声明多路复用mux对象
+	mux.Handle("/", &TestHandler{"Hi"}) //根路由
+	mux.HandleFunc("/login", login)     //login路由
+	server.Handler = mux
+	server.ListenAndServe()
+}
+
+func login(w http.ResponseWriter, r *http.Request) {
+	log.Printf("login")
+	w.Write([]byte(string("login")))
+}
+
+type TestHandler struct {
+	str string
+}
+
+//ServeHTTP方法，绑定TestHandler
+func (th *TestHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	log.Printf(th.str)
+	w.Write([]byte(string(th.str)))
+}
+```
