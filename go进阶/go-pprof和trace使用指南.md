@@ -244,7 +244,7 @@ func bigBytes() *[]byte {
 	return &s
 }
 ```
-web程序不需要引入`trace`包，否则，引入`pprof`包，通过curl 命令下载trace信息
+web程序不需要引入`trace`包，否则会再下载trace文件的时候报错，引入`pprof`包，通过curl 命令下载trace信息
 ```
 # 使用curl 下载最近5s的 trace 信息
 $ curl http://127.0.0.1:8080/debug/pprof/trace?seconds=5 > trace.pprof
