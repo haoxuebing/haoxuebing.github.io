@@ -7,7 +7,8 @@ description: fasthttp是一款高性能web库，做web服务宣称是net/http的
 ---
 
 ### Fasthttp 设计理念
-> 不要分配对象和[]byte缓冲区 - 尽可能多地重用它们
+    不要分配对象和[]byte缓冲区 - 尽可能多地重用它们
+
 ### net/http vs Fasthttp
 - net/http 的实现是一个连接新建一个 goroutine; fasthttp是利用一个 worker 复用 goroutine，减轻 runtime 调度 goroutine 的压力
 - net/http 解析的请求数据很多放在 map[string]string (http.Header) 或 map[string][]string (http.Request.Form)，有不必要的 []byte 到 string 的转换，是可以规避的
