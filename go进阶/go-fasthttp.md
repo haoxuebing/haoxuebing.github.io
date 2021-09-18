@@ -1,5 +1,5 @@
 ---
-title: 一款高性能web库fasthttp
+title: fasthttp使用指南
 date: 2021-09-18
 categories: go
 tags: [go, web框架]
