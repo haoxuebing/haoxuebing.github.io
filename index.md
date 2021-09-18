@@ -13,8 +13,9 @@ date: 2021-08-18 18:45:14
 - [go判断两个变量是否相等](go基础/go-判断两个变量是否相等.md)
 
 ## Go 进阶
-- [Context包](go/go-excelize.md)
 - [pprof和trace使用指南](go进阶/go-pprof和trace使用指南.md)
+- [fasthttp](go进阶/fasthttp.md)
+- [Context包](go/go-excelize.md)
 - [锁-sync.Mutex](go/go-sync.md)
 - [make与new区别](go/go-make_new.md)
 - [切片slice扩容](go/go-slice.md)
