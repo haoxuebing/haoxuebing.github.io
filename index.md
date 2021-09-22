@@ -15,7 +15,7 @@ date: 2021-08-18 18:45:14
 ## Go 进阶
 - [pprof和trace使用指南](go进阶/go-pprof和trace使用指南.md)
 - [fasthttp使用指南](go进阶/go-fasthttp.md)
-- [Context包](go/go-context.md)
+- [Context包](go进阶/go-context.md)
 - [锁-sync.Mutex](go/go-sync.md)
 - [make与new区别](go/go-make_new.md)
 - [切片slice扩容](go/go-slice.md)
