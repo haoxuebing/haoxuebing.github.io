@@ -176,9 +176,9 @@ key not found: color
 ```
 
 ### Background()
-context的四个方法的第一个参数都是 context.Background()
-因为background 本质上是 emptyCtx 结构体类型，是一个不可取消，没有设置截止时间，没有携带任何值的 Context。
-Background() 主要用于 main 函数、初始化以及测试代码中，作为 Context 这个树结构的最顶层的 Context，也就是根 Context。
+context的四个方法的第一个参数都是 context.Background()  
+因为background 本质上是 emptyCtx 结构体类型，是一个不可取消，没有设置截止时间，没有携带任何值的 Context  
+Background() 主要用于 main 函数、初始化以及测试代码中，作为 Context 这个树结构的最顶层的 Context，也就是根 Context  
 
 ## 参考文献
 [Go语言Context（上下文）](http://c.biancheng.net/view/5714.html)  
