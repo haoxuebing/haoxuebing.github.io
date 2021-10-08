@@ -140,7 +140,7 @@ fmt.Println("Timer 1 expired")
 ```
 当然如果你只是想单纯的等待的话，可以使用time.Sleep来实现。
 
-你还可以使用timer.Stop来停止计时器。
+还可以使用timer.Stop来停止计时器。
 ```golang
 timer2 := time.NewTimer(time.Second)
 go func() {
@@ -170,7 +170,8 @@ func main() {
     done := make(chan bool, 1)
     go worker(done)
     // 等待任务完成
-    
+    <-done
+}  
 ```
 
 ## 参考文献
