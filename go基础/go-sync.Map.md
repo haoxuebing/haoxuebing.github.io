@@ -3,10 +3,12 @@ title: go语言sync.Map
 date: 2021-10-08
 categories: go
 tags: [go, sync, map]
-description: Go语言中的 map 在并发情况下，只读是线程安全的，同时读写是线程不安全的
+description: Go语言中的 map 在并发情况下，只读是线程安全的，同时读写是线程不安全的,
 ---
 
-### sync.Map
+### sync.Map 简介
+> Go语言在 1.9 版本中提供了一种效率较高的并发安全的 sync.Map，sync.Map 和 map 不同，不是以语言原生形态提供，而是在 sync 包下的特殊结构
+#### sync.Map特点
 - 无须初始化，直接声明使用
 - sync.Map 有自己的存储、读取和删除方式， Store 表示存储，Load 表示获取，Delete 表示删除
 - 使用 Range 配合一个回调函数进行遍历操作，通过回调函数返回内部遍历出来的值
