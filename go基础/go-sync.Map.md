@@ -118,18 +118,16 @@ func main() {
 }
 
 func mySyncMap(keys string) interface{} {
-
 	if myMap[keys] != nil {
 		return myMap[keys]
 	}
-    // 在需要写map的时候加锁
+	//在需要写map的时候加锁
 	mylock.Lock()
 	defer mylock.Unlock()
 	//防止击穿
 	if myMap[keys] != nil {
 		return myMap[keys]
 	}
-
 	resp := "do something get value..."
 	myMap[keys] = resp
 
