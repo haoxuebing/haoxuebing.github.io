@@ -91,3 +91,8 @@ func main() {
 	fmt.Println(GetCount())
 }
 ```
+对于这两种锁类型，任何一个 Lock() 或 RLock() 均需要保证对应有 Unlock() 或 RUnlock() 调用与之对应，否则可能导致等待该锁的所有 goroutine 处于饥饿状态，甚至可能导致死锁  
+
+### 参考文献
+[探究sync.Mutex代码流程](https://zhuanlan.zhihu.com/p/291817455) 
+[Go语言互斥锁和读写互斥锁](http://c.biancheng.net/view/107.html) 
