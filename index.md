@@ -18,7 +18,7 @@ date: 2021-08-18 18:45:14
 - [pprof和trace使用指南](go进阶/go-pprof和trace使用指南.md)
 - [fasthttp使用指南](go进阶/go-fasthttp.md)
 - [Context包](go进阶/go-context.md)
-- [锁-sync.Mutex](go/go-sync.md)
+- [go-互斥锁与读写锁](go进阶/go-sync包之互斥锁与读写锁.md)
 - [make与new区别](go/go-make_new.md)
 - [切片slice扩容](go/go-slice.md)
 - [内存逃逸](go/go-内存逃逸.md)
