@@ -122,7 +122,7 @@ func main() {
     var urls = []string{
             "http://www.golang.org/",
             "http://www.google.com/",
-            "http://www.baiyuxiong.com/",
+            "http://www.baidu.com/",
     }
     for _, url := range urls {
         // Increment the WaitGroup counter.
@@ -143,7 +143,7 @@ func main() {
 ```
 执行结果：
 ```
-http://www.baiyuxiong.com/
+http://www.baidu.com/
 http://www.google.com/
 http://www.golang.org/
 over
