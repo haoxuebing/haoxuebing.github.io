@@ -14,16 +14,17 @@ date: 2021-08-18 18:45:14
 - [go-channel与select](go基础/go-channel与select.md)
 - [go语言sync.Map](go基础/go-sync.Map.md)
 - [go语言atomic原子操作](go基础/go语言atomic原子操作.md)
+- [go语言make与new区别](go/go语言make与new区别.md)
 
 ## Go 进阶
 - [go-pprof和trace使用指南](go进阶/go-pprof和trace使用指南.md)
 - [go-fasthttp](go进阶/go-fasthttp.md)
 - [go-context](go进阶/go-context.md)
 - [go-互斥锁与读写锁](go进阶/go-sync包之互斥锁与读写锁.md)
-- [make与new区别](go/go-make_new.md)
-- [切片slice扩容](go/go-slice.md)
+- [go-map](go/go-map实现.md)
+- [go-slice](go/go-slice.md)
+- 
 - [内存逃逸](go/go-内存逃逸.md)
-- [map实现](go/go-map实现.md)
 - [select原理](go/go-select原理.md)
 - [channel通信原理](go/go-channel通信原理.md)
 - [GPM模型](go/go-GPM模型.md)
