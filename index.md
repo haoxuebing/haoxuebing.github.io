@@ -14,7 +14,7 @@ date: 2021-08-18 18:45:14
 - [go-channel与select](go基础/go-channel与select.md)
 - [go语言sync.Map](go基础/go-sync.Map.md)
 - [go语言atomic原子操作](go基础/go语言atomic原子操作.md)
-- [go语言make与new区别](go/go语言make与new区别.md)
+- [go语言make与new区别](go基础/go语言make与new区别.md)
 
 ## Go 进阶
 - [go-pprof和trace使用指南](go进阶/go-pprof和trace使用指南.md)
