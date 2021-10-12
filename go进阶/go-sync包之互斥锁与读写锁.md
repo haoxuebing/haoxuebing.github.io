@@ -31,7 +31,7 @@ state 没上锁的时候是0，上锁了就是1
 Lock使用的原子操作 `atomic.CompareAndSwapInt32(&m.state, 0, mutexLocked)`，先比较后交换，如果 state 不是0表示其他协程已经上锁，这个时候会进入 `lockSlow()`，里面有个for死循环，每次循环都会有一个waitTime，直到上锁为止  
 ![lock](../images/go_lock.jpg)
 #### Unlock
-Unlock也是使用原子操作，`atomic.AddInt32(&m.state, -mutexLocked)`，这里直接减1，减完之后state如果不为0表示没有解锁，此时会调用`unlockSlow()`，这里会先判断如果是死锁就抛异常，如果不是死锁也有个for死循环去处理state
+Unlock也是使用原子操作，`atomic.AddInt32(&m.state, -mutexLocked)`，这里直接减1，减完之后state如果不为0表示没有解锁，此时会调用`unlockSlow()`，这里会先判断如果是死锁就抛异常，如果不是死锁也有个for死循环去处理state  
 ![unlock](../images/go_unlock.jpg)
 
 ### sync.RWMutex
