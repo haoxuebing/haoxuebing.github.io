@@ -18,9 +18,11 @@ description: map的底层实现是一个哈希表(也叫散列表)，哈希表�
 ## 哈希运算
 
 ![哈希运算](../images/哈希运算.png)
+
 哈希运算一般就是通过hash函数计算出一个key的数值，然后用这个数值与桶（数组）的个数m`取模`或者`与运算`
 
 go中的hash使用取模法
+
 ```
 index := hash("author") % array.len
 ```
