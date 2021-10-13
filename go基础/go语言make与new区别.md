@@ -8,20 +8,21 @@ description: new可以为所有类型分配内存，make用于slice，map，和c
 
 ## new与make
 >  new可以为所有类型分配内存，make用于slice，map，和channel的初始化  
+
 ```golang
 func new(Type) *Type
 func make(t Type, size ...IntegerType) Type
 ```
 
-### 区别
+### 返回值
 
-#### 返回值
+new返回的是指向Type的指针  
 
-从定义中可以看出，new返回的是指向Type的指针。 make直接返回的是Type类型值。
+make直接返回的是Type类型值。
 
 二者内存的分配都是在堆上
 
-#### 入参
+### 入参
 new只有一个Type参数，Type可以是任意类型数据
 
 make可以有多个参数，其中第一个参数与new的参数相同，但是只能是slice，map，或者chan中的一种。对于不同类型，size参数说明如下：
@@ -29,10 +30,10 @@ make可以有多个参数，其中第一个参数与new的参数相同，但是�
 - 对于map，会根据size大小分配资源，以足够存储size个元素。如果省略size，会默认分配一个小的起始size。
 - 对于chan，size表示缓冲区容量。如果省略size，channel为无缓冲channel。
 
-#### make和new对应底层的内存分配
+### make和new对应底层的内存分配
 ![make与new内存分配](../images/make与new内存分配.png)
 
-## 注意事项
+### 注意事项
 
 1、指针类型初始化需要分配地址
 
@@ -102,5 +103,5 @@ type user struct {
 
 
 ### 参考文献
-[Go make 和 new的区别](https://www.cnblogs.com/vincenshen/p/9356974.html)
+[Go make 和 new的区别](https://www.cnblogs.com/vincenshen/p/9356974.html)  
 [Go语言中new与make的区别](https://zhuanlan.zhihu.com/p/92993032)
