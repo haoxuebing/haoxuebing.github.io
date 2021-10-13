@@ -1,5 +1,5 @@
 ---
-title: go-map实现原理
+title: go-关于map的一些思考
 date: 2021-10-13
 categories: go
 tags: [go, map]
@@ -46,6 +46,7 @@ go语言中使用拉链法来解决hash碰撞
 ### 数据结构
 
 > map的源码位于 src/runtime/map.go
+
 ```golang
 //map结构体是hmap，是hashmap的缩写
 type hmap struct {
@@ -76,7 +77,6 @@ type bmap struct {
     pad      uintptr
     overflow uintptr
 }
-
 ```
 
 map同样也是数组存储的的，每个数组下标处存储的是一个bucket,每个bucket中可以存储8个kv键值对，当每个bucket存储的kv对到达8个之后，会通过overflow指针指向一个新的bucket，从而形成一个链表
