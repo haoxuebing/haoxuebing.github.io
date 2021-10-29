@@ -58,11 +58,9 @@ tcpdump tcp port 23 and host 192.168.1.11
 ```
 tcpdump -i eno16777736 port 80
 ```
-2. 在客户端使用curl命令发送http请求
-   
-![curl请求](../images/curl请求.png)
-
-3. 因为使用tcpdump 服务端 192.168.234.129 打印出如下完整报文：
+2. 在客户端使用curl命令发送http请求    
+![curl请求](../images/curl请求.png)  
+3. 服务端 192.168.234.129 使用tcpdump打印出如下报文：
 ```
 17:23:41.990650 IP 192.168.234.1.55487 > 192.168.234.129.http: Flags [S], seq 1565178236, win 64240, options [mss 1460,nop,wscale 8,nop,nop,sackOK], length 0
 17:23:41.990677 IP 192.168.234.129.http > 192.168.234.1.55487: Flags [S.], seq 3227702871, ack 1565178237, win 29200, options [mss 1460,nop,nop,sackOK,nop,wscale 7], length 0
