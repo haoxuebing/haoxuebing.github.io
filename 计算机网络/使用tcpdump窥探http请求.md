@@ -54,33 +54,14 @@ tcpdump tcp port 23 and host 192.168.1.11
 
 使用tcpdump 抓个http包看下 三次握手和四次挥手
 
-服务器 192.168.234.129 的 80端口有个静态页
 1. 首先在 192.168.234.129 服务器开启监听
 ```
 tcpdump -i eno16777736 port 80
 ```
 2. 在客户端使用curl命令发送http请求
-```
-$ curl 192.168.234.129
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100   251  100   251    0     0    97k      0 --:--:-- --:--:-- --:--:--  122k<!DOCTYPE html>
-<html>
-<head>
-<title>Welcome to nginx!</title>
-<style>
-    body {
-        width: 35em;
-        margin: 0 auto;
-        font-family: Tahoma, Verdana, Arial, sans-serif;
-    }
-</style>
-</head>
-<body>
-<h1>Hello World</h1>
-</body>
-</html>
-```
+   
+![curl请求](../images/curl请求.png)
+
 3. 因为使用tcpdump 服务端 192.168.234.129 打印出如下完整报文：
 ```
 17:23:41.990650 IP 192.168.234.1.55487 > 192.168.234.129.http: Flags [S], seq 1565178236, win 64240, options [mss 1460,nop,wscale 8,nop,nop,sackOK], length 0
