@@ -157,6 +157,6 @@ tcpdump -i eno16777736 port 80
 - 主动断开方收到对方发来的断开请求标识后再做出回应，自此完成四次挥手
 
 ## 参考文献
-[来自知乎剑灵的回答](https://www.zhihu.com/question/55890292/answer/146719190)  
+[为什么tcp连接断开只有3个包](https://www.zhihu.com/question/55890292/answer/146719190)  
 
 
