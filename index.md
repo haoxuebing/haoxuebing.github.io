@@ -24,13 +24,13 @@ date: 2021-08-18 18:45:14
 - [go-context](go进阶/go-context.md)
 - [go-互斥锁与读写锁](go进阶/go-sync包之互斥锁与读写锁.md)
 - [go-关于map的一些思考](go进阶/go-关于map的一些思考.md)
-- [go-slice](go/go-slice.md)
+- [go-GC](go进阶/go-GC演化史.md)
 - 
+- [go-slice](go/go-slice.md)
 - [内存逃逸](go/go-内存逃逸.md)
 - [select原理](go/go-select原理.md)
 - [channel通信原理](go/go-channel通信原理.md)
 - [GPM模型](go/go-GPM模型.md)
-- [go-GC](go/go-GC.md)
 - [如何避免GO命令行执行产生孤儿进程](go/go-如何避免GO命令行执行产生孤儿进程.md)
 
 ## 计算机网络
