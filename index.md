@@ -24,7 +24,7 @@ date: 2021-08-18 18:45:14
 - [go-context](go进阶/go-context.md)
 - [go-互斥锁与读写锁](go进阶/go-sync包之互斥锁与读写锁.md)
 - [go-关于map的一些思考](go进阶/go-关于map的一些思考.md)
-- [go-GC](go进阶/go-GC演化史.md)
+- [go-GC演化史](go进阶/go-GC演化史.md)
 - 
 - [go-slice](go/go-slice.md)
 - [内存逃逸](go/go-内存逃逸.md)
