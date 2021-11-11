@@ -3,7 +3,7 @@ title: go-GC演化史
 date: 2021-11-11
 categories: go
 tags: [go, gc]
-description:  垃圾回收  内存管理   自动释放  三色标记   STW
+description: 关键词：GC(Garbage Collection) 垃圾回收、内存管理、自动释放、三色标记、STW
 ---
 
 
