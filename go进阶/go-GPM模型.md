@@ -3,7 +3,7 @@ title: go-GPM模型
 date: 2021-11-19
 categories: go
 tags: [go, gpm]
-description: 关键词：进程、线程、协程、GPM、schedule
+description: 从进程/线程/协程到golang的GPM模型与调度策略以及其生命周期
 ---
 
 ## 进程/线程/协程
