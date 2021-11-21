@@ -1,9 +1,9 @@
 ---
-title: GPM调度器
+title: go-GPM模型
 date: 2021-11-19
 categories: go
 tags: [go, gpm]
-description: 关键词：进程、线程、协程、GPM
+description: 关键词：进程、线程、协程、GPM、schedule
 ---
 
 ## 进程/线程/协程
@@ -20,7 +20,7 @@ Node.js的思路是在单进程上利用`事件驱动`+`非阻塞IO`来处理请
 
 **协程**：是一种用户态的轻量级线程，最小占用内存只有2kb，协程的调度完全由用户控制，没有内核的开销，减少了TCB对CPU时间片的开销。
 
-虽然其他语言（python和php-swoole的co-routine）也逐渐引入了协程库的概念，但在协程的调度上，golang是在语言级别实现，用更少的CPU指令完成了协程的调度，这个调度也就是我们现在常叫的GPM模型。
+虽然其他语言（python和php-swoole的co-routine）也逐渐引入了协程库的概念，但在协程的调度上，golang是在语言级别实现，用更少的CPU指令完成了协程的调度，这个调度也就是我们现在常叫的G-P-M模型。
 
 ## go调度器历史
 go的调度器模型也是经历了多次迭代才有现在优异性能
