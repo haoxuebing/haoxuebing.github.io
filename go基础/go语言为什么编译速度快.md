@@ -3,7 +3,7 @@ title: go语言为什么编译速度快
 date: 2021-11-23
 categories: go
 tags: [go, 编译]
-description: 
+description: 编译速度快是go语言的其中优点之一
 ---
 
 ## go的优点
