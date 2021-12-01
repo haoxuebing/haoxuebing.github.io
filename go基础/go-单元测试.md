@@ -1,5 +1,5 @@
 ---
-title: go test
+title: go test 命令
 date: 2021-12-01
 categories: go
 tags: [go, test]

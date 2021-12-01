@@ -18,7 +18,7 @@ date: 2021-08-18 18:45:14
 - [go语言atomic原子操作](go基础/go语言atomic原子操作.md)
 - [go语言make与new区别](go基础/go语言make与new区别.md)
 - [go语言为什么编译速度快](go基础/go语言为什么编译速度快.md)
-- [go test](go基础/go-单元测试.md)
+- [go test 命令](go基础/go-单元测试.md)
 
 ## Go 进阶
 - [go-pprof和trace使用指南](go进阶/go-pprof和trace使用指南.md)
