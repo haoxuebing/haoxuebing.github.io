@@ -31,6 +31,7 @@ protocol buffer是google推出的一种数据描述语言，类似于XML能够�
     https://github.com/google/protobuf/releases
 
 -  linux 环境使用源码进行安装的步骤  
+
 ```
 # 获取源码包
 wget https://github.com/google/protobuf/archive/v3.5.0.tar.gz
@@ -50,6 +51,7 @@ make install
 ```
 
 #### 编写.proto
+
 ```
 syntax = "proto3";
 option go_package = "./pb";
