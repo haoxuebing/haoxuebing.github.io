@@ -46,9 +46,9 @@ sudo ldconfig
 protoc -h 
 
 # 安装protoc-gen-go，linux下这个插件不装没法生成go代码
-wget https://github.com/protocolbuffers/protobuf-go/releases/download/v1.27.1/protoc-gen-go.v1.27.1.linux.amd64.tar.gz
+go get github.com/golang/protobuf/{protoc-gen-go,proto}
 
-tar -zxvf protoc-gen-go.v1.27.1.linux.amd64.tar.gz
+cd $GOPATH
 
 # 解压后获得protoc-gen-go，直接复制到bin目录
 cp ./protoc-gen-go /usr/local/bin
@@ -85,16 +85,35 @@ service ArithService {
 
 使用protoc工具，把 .proto 文件转化成 .go 文件，使用protoc工具生成代码
 ```
-protoc --go_out=. --plugin=protorpc arith.proto
+protoc --go_out=plugins=grpc:. arith.proto  # 用这条命令去生成go文件
+
 ```
+
+~~protoc --go_out=. --plugin=grpc arith.proto~~ # 这条命令生成的go文件少内容，坑死我了
+
 
 sever、client都需要引入grpc
 ```
 go get google.golang.org/grpc
 ```
 #### server 端
+基于生成的arith.pb.go代码来实现一个rpc服务端
 
+vim server.go
 ``` golang
+package main
+
+import (
+	"context"
+	"errors"
+	"flag"
+	"fmt"
+	"go_rpc/pb"
+	"log"
+	"net"
+
+	"google.golang.org/grpc"
+)
 
 var (
 	port = flag.Int("port", 8097, "The server port")
@@ -139,10 +158,24 @@ func main() {
 
 ```
 
+运行上述程序，将会监听本地的8097端口并接收客户端的tcp连接。
 
 #### client 端
-
+基于生成的arith.pb.go再来实现一个客户端程序
+vim client.go 
 ``` golang
+package main
+
+import (
+	"context"
+	"flag"
+	"go_rpc/pb"
+	"log"
+	"time"
+
+	"google.golang.org/grpc"
+)
+
 const (
 	defaultName = "ArithService"
 )
@@ -174,4 +207,10 @@ func main() {
 	}
 	log.Printf("%s Multiply : %d", *name, r.GetPro())
 }
+
+```
+
+运行结果：
+```
+ArithService Multiply : 132
 ```
