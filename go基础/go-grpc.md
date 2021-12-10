@@ -222,4 +222,4 @@ ArithService Multiply : 132
 - 再就是检查下 `protoc-gen-go`插件，github源码库下载的可能也是有问题的，最好用go get 安装 
 
 ### 参考文献
-[gRPC 官方文档中文版](http://doc.oschina.net/grpc）  
+[gRPC 官方文档中文版](http://doc.oschina.net/grpc)  
