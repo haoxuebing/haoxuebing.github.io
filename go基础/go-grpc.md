@@ -86,7 +86,6 @@ service ArithService {
 使用protoc工具，把 .proto 文件转化成 .go 文件，使用protoc工具生成代码
 ```
 protoc --go_out=plugins=grpc:. arith.proto  # 用这条命令去生成go文件
-
 ```
 
 ~~protoc --go_out=. --plugin=grpc arith.proto~~ # 这条命令生成的go文件少内容，坑死我了
