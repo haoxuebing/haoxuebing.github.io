@@ -220,3 +220,6 @@ ArithService Multiply : 132
 如果使用protoc生成的 .go 文件有问题，缺少一些结构体或者方法 
 - 首先看下使用的命令 `protoc --go_out=plugins=grpc:. *.proto` 这个笔者用的没问题 
 - 再就是检查下 `protoc-gen-go`插件，github源码库下载的可能也是有问题的，最好用go get 安装 
+
+### 参考文献
+[gRPC 官方文档中文版](http://doc.oschina.net/grpc）  
