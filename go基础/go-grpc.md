@@ -27,40 +27,46 @@ protocol buffer是google推出的一种数据描述语言，类似于XML能够�
 
 #### 安装protobuf
 
-- 在 github 获取 protobuf 源码，windows 系统可以直接下载 exe 文件 
-    [https://github.com/google/protobuf/releases](https://github.com/google/protobuf/releases)
+github 获取 protobuf 源码 [https://github.com/google/protobuf/releases](https://github.com/google/protobuf/releases)
 
+- windows 系统可以直接下载 exe 文件
+    
 -  linux 环境使用源码进行安装的步骤  
 
 ```
 # 获取源码包
-wget https://github.com/google/protobuf/archive/v3.5.0.tar.gz
-
-# 解压缩并进入源码目录
-tar -zxvf v3.5.0.tar.gz
-cd protobuf-3.5.0
-
-# 生成configure文件
-./autogen.sh
-
-# 编译安装
+wget https://github.com/protocolbuffers/protobuf/releases/download/v3.19.1/protobuf-all-3.19.1.tar.gz
+cd protobuf-3.19.1/
 ./configure
 make
-make check
 make install
+刷新共享库 （很重要的一步啊）
+sudo ldconfig 
+# 成功后需要使用命令测试
+protoc -h 
+
+# 安装protoc-gen-go，linux下这个插件不装没法生成go代码
+wget https://github.com/protocolbuffers/protobuf-go/releases/download/v1.27.1/protoc-gen-go.v1.27.1.linux.amd64.tar.gz
+
+tar -zxvf protoc-gen-go.v1.27.1.linux.amd64.tar.gz
+
+# 解压后获得protoc-gen-go，直接复制到bin目录
+cp ./protoc-gen-go /usr/local/bin
+
 ```
 
-#### 编写.proto
+#### 编写 .proto 文件
 
+vim arith.proto
 ```
-syntax = "proto3";
-option go_package = "./pb";
+syntax = "proto3";   // 使用proto3版本
+option go_package = "./pb"; // 生成的.go 文件放在 pb文件夹下
 
 
 // 算术运算请求结构
 message ArithRequest {
-    int32 a = 1;
-    int32 b = 2;
+    int32 a = 1;   // 1代表顺序
+    int32 b = 2;   // 2代表顺序
 }
 
 // 算术运算响应结构
@@ -77,9 +83,9 @@ service ArithService {
 }
 ```
 
- 把 .proto 文件转化成 .go 文件，使用protoc工具生成代码
+使用protoc工具，把 .proto 文件转化成 .go 文件，使用protoc工具生成代码
 ```
-protoc --go_out=plugins=grpc:. arith.proto
+protoc --go_out=. --plugin=protorpc arith.proto
 ```
 
 sever、client都需要引入grpc
