@@ -11,12 +11,13 @@ Windows Service Wrapper，简称WinSW，可用于管理windows上的服务
 
 github地址  https://github.com/winsw/winsw
 
-安装服务 `winsw install myapp.xml`
-启动服务 `winsw start myapp.xml`
+安装服务 `winsw install myapp.xml`  
+启动服务 `winsw start myapp.xml`  
 查看服务状态 `winsw status myapp.xml`
 
 
 ## 命令
+
 ```
 # 安装
 winsw install [<path-to-config>] [--no-elevate] [--user|--username <username>] [--pass|--password <password>]
@@ -40,6 +41,7 @@ winsw dev ps [<path-to-config>] [-a|--all]
 winsw dev kill [<path-to-config>] [--no-elevate]
 # 列出由当前可执行文件管理的服务
 winsw dev list
+
 ```
 
 ## 用例
@@ -48,6 +50,7 @@ winsw dev list
 - 1.下载 `WinSW-x64.exe` 然后重名为 `winsw`
   下载地址 https://github.com/winsw/winsw/releases/tag/v3.0.0-alpha.10
 - 2.在winsw的目录下创建 `winsw.xml` 内容如下
+
 ```
 <service>
     <!-- 该服务的唯一标识 -->
@@ -70,9 +73,11 @@ winsw dev list
     <logpath>logs</logpath>
 </service>
 ```  
+使用 `winsw.xml` 这个名字，可在命令中省去指定文件
+
 - 3.启动服务
 ```
-$ ./winsw.exe install   # 注册服务
+$ ./winsw.exe install   # 注册服务 
 $ ./winsw.exe start   # 启动服务
 ``` 
 - 4.检测服务
