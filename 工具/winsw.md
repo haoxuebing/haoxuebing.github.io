@@ -84,4 +84,4 @@ $ ./winsw.exe start   # 启动服务
 
 可以通过任务管理器查看
 
-也可使用 `./winsw.exe status` 或者 ` ./winsw.exe dev list` 查看
+也可使用 `./winsw.exe status` 或者 `./winsw.exe dev list` 查看
