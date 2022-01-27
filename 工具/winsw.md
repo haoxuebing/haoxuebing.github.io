@@ -73,7 +73,7 @@ winsw dev list
     <logpath>logs</logpath>
 </service>
 ```  
-使用 `winsw.xml` 这个名字，可在命令中省去指定文件
+使用 `winsw.xml` 这个名字，可在命令中省去指定config
 
 - 3.启动服务
 ```
