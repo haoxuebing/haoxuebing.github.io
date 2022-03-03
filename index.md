@@ -1,6 +1,6 @@
 ---
 title: 追风逐月
-description: 好记性不如烂硬盘
+description: 好记性不如烂笔头
 date: 2021-08-18 18:45:14
 ---
 
