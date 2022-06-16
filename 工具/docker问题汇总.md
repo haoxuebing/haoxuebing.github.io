@@ -18,7 +18,6 @@ docker build --platform linux/x86_64 -t activity:latest .
 
 ## 镜像拉取失败
 > 公司内部镜像拉取失败，需要设置白名单
-
 ### docker设置白名单
 ![docker白名单](../images/docker白名单.png)
 ```
@@ -29,7 +28,6 @@ docker build --platform linux/x86_64 -t activity:latest .
 
 ## vscode+docker+python 断点调试
 > ImportError: No module named _thread
-
 [stackoverflow](https://stackoverflow.com/questions/71701629/importerror-no-module-named-thread)
 ### 描述
 在使用 vscode + `Remote - Containers` 插件调试 docker 容器中的Python2 项目时，报以上错误
