@@ -97,8 +97,16 @@ EXPOSE 8080
 # 启动容器时运行的命令
 CMD ["/dist/app"]
 ```
-- docker build -t hxb/my_web_0515:v1 .     #编译dockerfile
-- docker run -itd -p 8080:8080 hxb/my_web_0515:v1   #运行编译好的镜像
+\#编译dockerfile
+```
+docker build -t my_web_0515:v1 .
+```
+
+\# 运行编译好的镜像
+```
+docker run -itd -p 8080:8080 my_web_0515:v1
+```   
+
 
 ## docker-compose.yml
 ```
@@ -114,6 +122,11 @@ services:
       - 8080:8080
 
 ```
-- docker-compose -f docker-compose.yml up -d   #启动并运行整个应用程序
+\# 启动并运行整个应用程序
+```
+docker-compose -f docker-compose.yml up -d
+```
+
 ## 其他
+
 [docker命令大全](https://www.runoob.com/docker/docker-command-manual.html)
