@@ -62,5 +62,58 @@ docker build -t test/myapp:v1 .
 - -t 镜像的名字及标签，通常 name:tag 或者 name 格式
 - . 表示当前目录，也可是其他目录或URL
 
+## Dockerfile
+```
+FROM golang:alpine
+# 为我们的镜像设置必要的环境变量
+ENV GO111MODULE=on \
+    CGO_ENABLED=0 \
+    GOOS=linux \
+    GOARCH=amd64 \
+	GOPROXY="https://goproxy.cn,direct"
+
+WORKDIR /home/www/code_20220515
+
+# 将代码复制到容器中
+COPY . .
+# 将我们的代码编译成二进制可执行文件  可执行文件名为 app
+RUN go build -o app .
+
+# 移动到用于存放生成的二进制文件的 /dist 目录
+WORKDIR /dist
+
+RUN cp /home/www/code_20220515/app .
+
+# 在容器目录 /dist 创建一个目录 为static
+RUN mkdir static .
+
+# 在容器目录 把宿主机的静态资源文件 拷贝到 容器/dist/src目录下
+# 这个步骤可以略  因为项目是引用到了 外部静态资源
+RUN cp -r /home/www/code_20220515/static .
+
+# 声明服务端口
+EXPOSE 8080
+
+# 启动容器时运行的命令
+CMD ["/dist/app"]
+```
+- docker build -t hxb/my_web_0515:v1 .     #编译dockerfile
+- docker run -itd -p 8080:8080 hxb/my_web_0515:v1   #运行编译好的镜像
+
+## docker-compose.yml
+```
+version: '3.4'
+
+services:
+  code1:
+    image: code1
+    build:
+      context: .
+      dockerfile: ./dockerfile
+    ports:
+      - 8080:8080
+
+```
+- docker-compose -f docker-compose.yml up -d   #启动并运行整个应用程序
 ## 其他
 [docker命令大全](https://www.runoob.com/docker/docker-command-manual.html)
