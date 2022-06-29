@@ -1,10 +1,11 @@
 
 ---
 title: go反射
-date: 2021-08-31
+date: 2022-06-29
 categories: go
 tags: [go, reflect]
 description: 反射
+
 ---
 
 > concreteCat,_ := reflect.ValueOf(cat).Interface().(Cat)
