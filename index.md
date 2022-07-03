@@ -45,6 +45,7 @@ date: 2021-08-18 18:45:14
 - [winsw-开机启动某个windows程序](工具/winsw.md)
 - [Docker命令](工具/docker.md)
 - [Docker问题汇总](工具/docker问题汇总.md)
+- [git 常用命令](工具/git常用命令.md)
 
 ## 知识体系
 ![知识体系](/知识体系/知识体系.svg)
