@@ -4,8 +4,8 @@ description: 好记性不如烂笔头
 date: 2021-08-18 18:45:14
 ---
 
-
-
+## 小知识
+- [golang中文字符串遍历](go小知识/golang中文字符串遍历.md)
 ## Go 基础
 - [sync包之WaitGroup](go基础/go-sync包之WaitGroup.md)
 - [go操作excel](go基础/go-excelize.md)
