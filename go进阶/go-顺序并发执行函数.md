@@ -17,6 +17,7 @@ description: 使用channel、select 实现协程间的通信
 - 使用channel、select 实现协程间的通信
 - 使用有序的channel来保证函数的执行顺序
 - 使用了sync.WaitGroup来等待所有协程执行完成
+- 抽离出一个调度器来控制要并发执行的函数和执行次数
 
 ## 代码
 
