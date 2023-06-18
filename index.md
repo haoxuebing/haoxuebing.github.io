@@ -6,6 +6,7 @@ date: 2021-08-18 18:45:14
 
 ## 小知识
 - [golang中文字符串遍历](go小知识/golang中文字符串遍历.md)
+
 ## Go 基础
 - [sync包之WaitGroup](go基础/go-sync包之WaitGroup.md)
 - [go操作excel](go基础/go-excelize.md)
@@ -31,12 +32,14 @@ date: 2021-08-18 18:45:14
 - [go-关于map的一些思考](go进阶/go-关于map的一些思考.md)
 - [go-GC演化史](go进阶/go-GC演化史.md)
 - [go-GPM模型](go进阶/go-GPM模型.md)
-- [go-并发调用函数取消](go进阶/go-并发调用函数取消.md)
 - [go-slice](go/go-slice.md)
 - [内存逃逸](go/go-内存逃逸.md)
 - [select原理](go/go-select原理.md)
 - [channel通信原理](go/go-channel通信原理.md)
 - [如何避免GO命令行执行产生孤儿进程](go/go-如何避免GO命令行执行产生孤儿进程.md)
+- [go-并发调用函数取消](go进阶/go-并发调用函数取消.md)
+- [go-顺序并发执行函数](go进阶/go-顺序并发执行函数.md)
+
 
 ## 计算机网络
 - [使用tcpdump窥探http请求](计算机网络/使用tcpdump窥探http请求.md)

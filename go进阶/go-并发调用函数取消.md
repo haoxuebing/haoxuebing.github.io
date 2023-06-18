@@ -1,9 +1,9 @@
 ---
-title: go context包
+title: 并发调用函数取消
 date: 2023-06-18
 categories: go
 tags: [go, context]
-description: Context 几乎成为了并发控制和超时控制的标准做法
+description: 
 ---
 
 ## 场景描述
