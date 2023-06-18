@@ -108,3 +108,16 @@ func (c *Control) C(ctx context.Context) {
 ```
 
 ## 输出
+
+```
+Func A Cancel.
+Func C Cancel.
+Func B Cancel.
+Func B Done.
+Func C Cancel.
+Func A Cancel.
+Func B Done.
+Func C Done.
+Func A Done.
+
+```
