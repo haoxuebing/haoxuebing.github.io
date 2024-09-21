@@ -5,9 +5,11 @@ date: 2021-08-18 18:45:14
 ---
 
 ## 小知识
+
 - [golang中文字符串遍历](go小知识/golang中文字符串遍历.md)
 
 ## Go 基础
+
 - [sync包之WaitGroup](go基础/go-sync包之WaitGroup.md)
 - [go操作excel](go基础/go-excelize.md)
 - [go类型转化](go基础/go-类型转化.md)
@@ -25,6 +27,7 @@ date: 2021-08-18 18:45:14
 - [go-reflect](go基础/go-reflect.md)
 
 ## Go 进阶
+
 - [go-pprof和trace使用指南](go进阶/go-pprof和trace使用指南.md)
 - [go-fasthttp](go进阶/go-fasthttp.md)
 - [go-context](go进阶/go-context.md)
@@ -42,16 +45,24 @@ date: 2021-08-18 18:45:14
 
 
 ## 计算机网络
+
 - [使用tcpdump窥探http请求](计算机网络/使用tcpdump窥探http请求.md)
 
 ## 工具
+
 - [winsw-开机启动某个windows程序](工具/winsw.md)
 - [Docker命令](工具/docker.md)
 - [Docker问题汇总](工具/docker问题汇总.md)
 - [git 常用命令](工具/git常用命令.md)
 
 ## 问题排查
+
 - [linux磁盘空间排查](问题排查/linux磁盘空间排查.md)
 
+## typescript
+
+- [安装typescript](typescript/安装typescript.md)
+
 ## 知识体系
+
 - [知识体系](/知识体系/知识体系.svg)
