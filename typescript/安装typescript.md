@@ -1,5 +1,4 @@
 ---
-
 title: 安装typescript
 date: 2024-09-21
 categories: typescript
