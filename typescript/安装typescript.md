@@ -1,6 +1,7 @@
 ---
+
 title: 安装typescript
-date: 2024-09-021
+date: 2024-09-21
 categories: typescript
 tags: [typescript]
 description: typescript 安装与使用
